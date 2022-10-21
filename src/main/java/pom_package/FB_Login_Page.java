@@ -17,7 +17,7 @@ public class FB_Login_Page {
 	
 	@FindBy(xpath = "//button[text()='Log in']")private WebElement ClickToLogin;
 	
-
+    @FindBy(xpath = "//a[contains(text(),'Forgotten password?')]") private WebElement Forgot_Pass;
 	
 	public void FB_Login_Page_EnterUserName(String name) throws InterruptedException {
 		Thread.sleep(2000);
@@ -33,7 +33,9 @@ public class FB_Login_Page {
 		ClickToLogin.click();
 	}
 	
-	
+	public void Forget_Password() {
+		Forgot_Pass.click();	
+	}
 	
 	
 	
